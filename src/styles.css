@@ -769,6 +769,80 @@ select {
   color: var(--muted);
 }
 
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 243, 0.84);
+  box-shadow: 0 20px 50px rgba(67, 42, 19, 0.06);
+}
+
+.payment-card p {
+  margin: 0;
+  color: var(--gold-deep);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.payment-card h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.9rem, 2.5vw, 2.5rem);
+  line-height: 1;
+}
+
+.payment-card span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.payment-qr-link {
+  display: block;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 38px rgba(67, 42, 19, 0.08);
+}
+
+.payment-qr-link img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.payment-note {
+  color: var(--muted) !important;
+  font-size: 0.98rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.7 !important;
+  text-transform: none !important;
+}
+
+.payment-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 0.92rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.74);
+  font-weight: 700;
+}
+
 .booking-card {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -935,6 +1009,10 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .payment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .cta-banner {
     display: grid;
   }
@@ -1037,7 +1115,8 @@ select {
   .facts-strip,
   .timeline-grid,
   .pricing-grid,
-  .contact-grid {
+  .contact-grid,
+  .payment-grid {
     grid-template-columns: 1fr;
   }
 

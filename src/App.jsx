@@ -12,6 +12,7 @@ import {
   itinerary,
   motionProof,
   navItems,
+  paymentOptions,
   packageFacts,
   pricing,
   storyCards,
@@ -135,6 +136,34 @@ function MediaCard({ item, onSelect }) {
         <h3>{item.title}</h3>
         <p>{item.caption}</p>
       </div>
+    </article>
+  );
+}
+
+function PaymentCard({ option }) {
+  return (
+    <article className="payment-card">
+      <p>{option.platform}</p>
+      <h3>{option.title}</h3>
+      <span>{option.subtitle}</span>
+      <a
+        className="payment-qr-link"
+        href={option.url}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Open ${option.platform} payment page`}
+      >
+        <img src={option.qr.src} alt={option.qr.title} />
+      </a>
+      <p className="payment-note">{option.note}</p>
+      <a
+        className="payment-link-button"
+        href={option.url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open {option.platform}
+      </a>
     </article>
   );
 }
@@ -506,10 +535,10 @@ function ContactPage() {
         <article className="booking-card">
           <div>
             <p className="section-eyebrow">How to pay</p>
-            <h3>Payments go through Zelle to Dave Ray</h3>
+            <h3>Choose PayPal, Cash App, or Zelle</h3>
             <p>
-              After your seat is confirmed, use the steps below to secure your
-              package and receive the next travel details.
+              After your seat is confirmed, use one of the payment options
+              below to secure your package and receive the next travel details.
             </p>
           </div>
           <ol>
@@ -524,6 +553,12 @@ function ContactPage() {
             <a href={contactDetails.phoneHref}>Call now</a>
           </div>
         </article>
+
+        <div className="payment-grid">
+          {paymentOptions.map((option) => (
+            <PaymentCard key={option.platform} option={option} />
+          ))}
+        </div>
       </section>
 
       <section className="faq-section">

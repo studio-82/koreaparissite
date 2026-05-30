@@ -385,7 +385,7 @@ export const faqItems = [
   {
     question: "How do travelers pay?",
     answer:
-      "Guests should confirm availability first and then pay through Zelle to Dave Ray before emailing proof of payment.",
+      "Guests should confirm availability first and then pay Dave Ray through PayPal, Cash App, or Zelle before emailing proof of payment.",
   },
   {
     question: "Who is this experience for?",
@@ -401,7 +401,7 @@ export const faqItems = [
 
 export const bookingSteps = [
   "Confirm your seat and preferred package by phone or email.",
-  "Send your payment through Zelle to Dave Ray.",
+  "Open PayPal, Cash App, or Zelle and send your payment to Dave Ray.",
   "Email your payment confirmation to receive the next travel and training details.",
 ];
 
@@ -412,6 +412,45 @@ export const contactDetails = {
   phoneHref: "tel:+13479348494",
   address: "Dave Ray Enterprises, 252 W 29th St, Ste 6A, New York, NY 10001",
 };
+
+export const paymentOptions = [
+  {
+    platform: "Cash App",
+    title: "Pay Dave Ray on Cash App",
+    subtitle: "$DaveRay",
+    note: "Tap the code to open Cash App, then enter your amount and include your full name and package in the note.",
+    url: "https://cash.app/$DaveRay?qr=1",
+    qr: mediaItem(
+      "Cashapp QR code.png",
+      "Cash App QR code",
+      "Cash App QR code for Dave Ray.",
+    ),
+  },
+  {
+    platform: "PayPal",
+    title: "Pay Dave Ray on PayPal",
+    subtitle: "PayPal QR checkout",
+    note: "Tap the code to open PayPal, then enter your amount and include your full name and package in the message.",
+    url: "https://www.paypal.com/qrcodes/managed/8e1b12a6-e126-489c-b92e-0ceff2183f08?utm_source=hawk_quick_link",
+    qr: mediaItem(
+      "Paypal QR code.png",
+      "PayPal QR code",
+      "PayPal QR code for Dave Ray.",
+    ),
+  },
+  {
+    platform: "Zelle",
+    title: "Pay Dave Ray on Zelle",
+    subtitle: "Zelle payment QR",
+    note: "Tap the code to open Zelle, then enter your amount and include your full name and package details with the payment.",
+    url: "https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiRGF2ZSIsInRva2VuIjoiMTM0NzkzNDg0OTQifQ==",
+    qr: mediaItem(
+      "Zelle QR Code.png",
+      "Zelle QR code",
+      "Zelle QR code for Dave Ray.",
+    ),
+  },
+];
 
 export const archiveItems = [
   ...galleryGroups.flatMap((group) => group.items),
