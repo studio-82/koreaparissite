@@ -5,6 +5,7 @@ import {
   aboutOverview,
   archiveItems,
   bookingSteps,
+  contactSlides,
   contactDetails,
   coursePartner,
   coursePillars,
@@ -84,14 +85,13 @@ function StoryCard({ card }) {
   );
 }
 
-function TimelineVisual({ item }) {
-  const slides = item.mediaGallery?.length ? item.mediaGallery : [item.media];
+function AutoSlideshow({ slides, label, frameClassName = "" }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const isSlideshow = slides.length > 1;
 
   useEffect(() => {
     setActiveIndex(0);
-  }, [item.day]);
+  }, [slides]);
 
   useEffect(() => {
     if (!isSlideshow) {
@@ -106,12 +106,18 @@ function TimelineVisual({ item }) {
   }, [isSlideshow, slides.length]);
 
   if (!isSlideshow) {
-    return <img src={item.media.src} alt={item.media.title} />;
+    return (
+      <img
+        className={frameClassName}
+        src={slides[0].src}
+        alt={slides[0].title}
+      />
+    );
   }
 
   return (
     <div className="timeline-visual">
-      <div className="timeline-slideshow" aria-label={`${item.title} slideshow`}>
+      <div className={`timeline-slideshow ${frameClassName}`.trim()} aria-label={label}>
         {slides.map((slide, index) => (
           <img
             key={slide.file}
@@ -131,6 +137,12 @@ function TimelineVisual({ item }) {
       </div>
     </div>
   );
+}
+
+function TimelineVisual({ item }) {
+  const slides = item.mediaGallery?.length ? item.mediaGallery : [item.media];
+
+  return <AutoSlideshow slides={slides} label={`${item.title} slideshow`} />;
 }
 
 function TimelineItem({ item }) {
@@ -211,6 +223,38 @@ function PaymentCard({ option }) {
       >
         Open {option.platform}
       </a>
+    </article>
+  );
+}
+
+function ContactShowcase() {
+  return (
+    <article className="contact-card contact-showcase-card">
+      <div className="contact-showcase-copy">
+        <p>Contact</p>
+        <h3>Ray of Sunshine Travel Group</h3>
+        <span>
+          Reach Dave Ray directly to confirm space, request the brochure, or
+          ask which package fits you before sending payment.
+        </span>
+        <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
+        <a href={contactDetails.phoneHref}>{contactDetails.phoneDisplay}</a>
+        <a href={contactDetails.site} target="_blank" rel="noreferrer">
+          www.parissouthkoreatrips.com
+        </a>
+        <span>{contactDetails.address}</span>
+      </div>
+      <div className="contact-showcase-visual">
+        <AutoSlideshow
+          slides={contactSlides}
+          label="Dave Ray contact slideshow"
+          frameClassName="contact-slideshow-frame"
+        />
+        <span className="contact-showcase-caption">
+          A few travel moments from the South Korea experience you can ask Dave
+          Ray about directly.
+        </span>
+      </div>
     </article>
   );
 }
@@ -683,17 +727,8 @@ function ContactPage() {
           description="Reach out directly to request the brochure, hold your seat, or confirm the package you want."
         />
         <div className="contact-grid">
-          <article className="contact-card">
-            <p>Contact</p>
-            <h3>Ray of Sunshine Travel Group</h3>
-            <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
-            <a href={contactDetails.phoneHref}>{contactDetails.phoneDisplay}</a>
-            <a href={contactDetails.site} target="_blank" rel="noreferrer">
-              www.parissouthkoreatrips.com
-            </a>
-            <span>{contactDetails.address}</span>
-          </article>
-          <article className="contact-card">
+          <ContactShowcase />
+          <article className="contact-card contact-request-card">
             <p>Quick requests</p>
             <h3>Start with the option that fits you</h3>
             <ul>

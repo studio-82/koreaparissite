@@ -467,6 +467,29 @@ export const contactDetails = {
   address: "Dave Ray Enterprises, 252 W 29th St, Ste 6A, New York, NY 10001",
 };
 
+export const contactSlides = [
+  mediaItem(
+    "drSlide1.jpg",
+    "Dave Ray trip moment one",
+    "A travel snapshot used in the contact-page slideshow.",
+  ),
+  mediaItem(
+    "drSlide2.jpg",
+    "Dave Ray trip moment two",
+    "A travel snapshot used in the contact-page slideshow.",
+  ),
+  mediaItem(
+    "drSlide3.jpg",
+    "Dave Ray trip moment three",
+    "A travel snapshot used in the contact-page slideshow.",
+  ),
+  mediaItem(
+    "drSlide4.jpg",
+    "Dave Ray trip moment four",
+    "A travel snapshot used in the contact-page slideshow.",
+  ),
+];
+
 export const paymentOptions = [
   {
     platform: "Cash App",
