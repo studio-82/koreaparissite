@@ -239,6 +239,14 @@ function SiteHeader() {
   );
 }
 
+function renderPricingFeature(feature) {
+  if (feature === "Airfare excluded") {
+    return <strong>{feature}</strong>;
+  }
+
+  return feature;
+}
+
 function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -333,7 +341,7 @@ function HomePage({ countdown }) {
       <section className="story-section">
         <SectionHeading
           eyebrow="What the trip includes"
-          title="Travel, wellness, and guided Korea access"
+          title="Travel, Trichology, Wellness and Guided Tour"
           description="The South Korea package is designed for guests who want a beautiful trip, clear structure, and a stronger beauty-and-wellness angle than a typical tour."
         />
         <div className="story-grid">
@@ -382,7 +390,7 @@ function HomePage({ countdown }) {
               <span>{item.note}</span>
               <ul>
                 {item.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
+                  <li key={feature}>{renderPricingFeature(feature)}</li>
                 ))}
               </ul>
             </article>
@@ -547,7 +555,7 @@ function ContactPage() {
               <span>{item.note}</span>
               <ul>
                 {item.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
+                  <li key={feature}>{renderPricingFeature(feature)}</li>
                 ))}
               </ul>
             </article>
