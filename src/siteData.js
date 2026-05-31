@@ -167,9 +167,9 @@ export const itinerary = [
         "A polished room that reflects the comfort and atmosphere of the wellness visit.",
       ),
       mediaItem(
-        "278616.jpg",
-        "Scalp treatment",
-        "A hands-on treatment moment tied to the training day.",
+        "278617.jpg",
+        "Product shelf",
+        "Products that support the scalp-care routines discussed during the trip.",
       ),
     ],
     media: mediaItem(

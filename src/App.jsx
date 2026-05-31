@@ -689,7 +689,7 @@ function ContactPage() {
             <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
             <a href={contactDetails.phoneHref}>{contactDetails.phoneDisplay}</a>
             <a href={contactDetails.site} target="_blank" rel="noreferrer">
-              parissouthkoreatrips.com
+              www.parissouthkoreatrips.com
             </a>
             <span>{contactDetails.address}</span>
           </article>
