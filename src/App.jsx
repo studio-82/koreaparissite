@@ -272,7 +272,7 @@ function HomePage({ countdown }) {
           <h1>Visit South Korea with RITA</h1>
           <p className="hero-summary">
             Join a hosted South Korea trip that blends guided sightseeing,
-            premium head-spa access, and an optional trichology course for
+            premium head-spa access, and an optional Trichology course for
             guests who want more than a standard tour.
           </p>
           <div className="hero-cta-row">
@@ -365,7 +365,7 @@ function HomePage({ countdown }) {
         <SectionHeading
           eyebrow="Packages"
           title="Choose the travel package, the course, or both"
-          description="You can join for the hosted travel experience, add the separate trichology course, or confirm both together."
+          description="You can join for the hosted travel experience, add the separate Trichology course, or confirm both together."
         />
         <div className="pricing-grid">
           {pricing.map((item) => (
@@ -434,7 +434,7 @@ function AboutPage({ onSelect }) {
       <section className="course-section">
         <SectionHeading
           eyebrow="Training option"
-          title="What happens inside the trichology portion"
+          title="What happens inside the Trichology portion"
           description="The course option is for guests who want professional learning layered into the South Korea trip rather than treated as a separate classroom event."
         />
         <div className="course-layout">

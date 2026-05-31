@@ -69,10 +69,10 @@ export const aboutOverview = {
   eyebrow: "About RITA",
   title: "A hosted South Korea trip built around beauty, scalp wellness, and guided access",
   description:
-    "RITA combines the excitement of traveling through South Korea with an optional trichology training experience. Guests spend the week moving between sightseeing, wellness spaces, product environments, and guided group moments designed to feel both inspiring and professionally useful.",
+    "RITA combines the excitement of traveling through South Korea with an optional Trichology training experience. Guests spend the week moving between sightseeing, wellness spaces, product environments, and guided group moments designed to feel both inspiring and professionally useful.",
   points: [
     "Guided travel through Seoul, Incheon, and Daejeon",
-    "A separate course option for guests who want trichology exposure",
+    "A separate course option for guests who want Trichology exposure",
     "Visits that connect head spa culture, scalp care, and product operations",
   ],
   image: mediaItem(
@@ -98,7 +98,7 @@ export const storyCards = [
     eyebrow: "Head spa immersion",
     title: "Step into treatment rooms, not just classrooms",
     description:
-      "Guests see how premium Korean scalp-care and trichology spaces are set up, how services flow from consultation to treatment, and why the head spa experience feels so elevated in person.",
+      "Guests see how premium Korean scalp-care and Trichology spaces are set up, how services flow from consultation to treatment, and why the head spa experience feels so elevated in person.",
     media: mediaItem(
       "278637.jpg",
       "Head spa room",
@@ -384,9 +384,9 @@ export const faqItems = [
       "Your travel package includes hotel accommodation, meals at the hotel, transportation, a tour guide, and a photographer. Airfare is specifically excluded.",
   },
   {
-    question: "Is the trichology course separate from the trip cost?",
+    question: "Is the Trichology course separate from the trip cost?",
     answer:
-      "Yes. The travel package is listed at $950 per person, while the trichology course is listed separately at $2,500 per person.",
+      "Yes. The travel package is listed at $950 per person, while the Trichology course is listed separately at $2,500 per person.",
   },
   {
     question: "How do travelers pay?",
@@ -401,7 +401,7 @@ export const faqItems = [
   {
     question: "Who is this experience for?",
     answer:
-      "It is best suited to beauty professionals, scalp-care specialists, salon owners, and learners who want both South Korea travel and exposure to trichology-adjacent spaces.",
+      "It is best suited to beauty professionals, scalp-care specialists, salon owners, and learners who want both South Korea travel and exposure to Trichology-adjacent spaces.",
   },
   {
     question: "What should travelers plan for separately?",
