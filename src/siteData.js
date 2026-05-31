@@ -1,8 +1,11 @@
+import ecobioMedicalInstituteLogo from "./assets/ecobio-medical-institute-logo.png";
+
 const rawAssets = import.meta.glob(
   [
     "../*.{jpg,jpeg,png,webp,mp4,mov,webm,m4v}",
     "!../278653.jpg",
     "!../Logo-01.png",
+    "!../ecobioMedicalInstitute.png",
     "!../Cashapp QR code.png",
     "!../Paypal QR code.png",
     "!../Zelle QR Code.png",
@@ -147,6 +150,28 @@ export const itinerary = [
     title: "Head spa and premium scalp-wellness experience",
     description:
       "Step into Korean treatment spaces, learn how the experience is structured, and enjoy a closer look at the wellness side of the trip.",
+    mediaGallery: [
+      mediaItem(
+        "278618.jpg",
+        "Head spa stations",
+        "Treatment chairs and care spaces connected to the scalp-wellness experience.",
+      ),
+      mediaItem(
+        "278619.jpg",
+        "Wash station",
+        "A closer look at the care spaces used in premium head spa experiences.",
+      ),
+      mediaItem(
+        "278637.jpg",
+        "Treatment room",
+        "A polished room that reflects the comfort and atmosphere of the wellness visit.",
+      ),
+      mediaItem(
+        "278616.jpg",
+        "Scalp treatment",
+        "A hands-on treatment moment tied to the training day.",
+      ),
+    ],
     media: mediaItem(
       "278618.jpg",
       "Head spa stations",
@@ -241,6 +266,23 @@ export const coursePillars = [
     ),
   },
 ];
+
+export const coursePartner = {
+  eyebrow: "Institute partner",
+  title: "Delivered with Ecobio Medical Institute",
+  description:
+    "The Trichology portion is delivered with Ecobio Medical Institute, the South Korean scalp-care institute behind Head Spa K. On its official site, Ecobio says it has focused on scalp and hair product research since 1995 and continues to build its training, product, and manufacturing work around K-scalp-care.",
+  points: [
+    "Founded in 1995 with long-running scalp and hair product R&D",
+    "30 years of natural-ingredient research and development, according to Ecobio",
+    "Head Spa K is part of the Ecobio group and is presented as an international head-spa network",
+    "ISO 22716-certified cosmetics manufacturing and quality systems",
+  ],
+  logo: {
+    src: ecobioMedicalInstituteLogo,
+    alt: "Ecobio Medical Institute logo",
+  },
+};
 
 export const pricing = [
   {

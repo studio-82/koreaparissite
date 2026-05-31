@@ -635,10 +635,113 @@ select {
   border-radius: 20px;
 }
 
+.timeline-visual {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.92;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #e3d2b5;
+}
+
+.timeline-slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 480ms ease;
+}
+
+.timeline-slideshow img.is-active {
+  opacity: 1;
+}
+
+.timeline-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.timeline-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(177, 137, 82, 0.28);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.timeline-dots span.is-active {
+  background: var(--gold);
+  transform: scale(1.12);
+}
+
 .course-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 22px;
+}
+
+.course-partner-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) 280px;
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 243, 0.84);
+  box-shadow: 0 20px 50px rgba(67, 42, 19, 0.06);
+}
+
+.course-partner-copy p {
+  margin: 0 0 10px;
+  color: var(--gold-deep);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.course-partner-copy h3 {
+  margin: 0 0 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  line-height: 0.98;
+}
+
+.course-partner-copy span {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.course-partner-copy ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.course-partner-logo-shell {
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  padding: 22px;
+  border: 1px solid rgba(177, 137, 82, 0.2);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 239, 228, 0.9));
+}
+
+.course-partner-logo-shell img {
+  width: min(100%, 240px);
+  height: auto;
+  object-fit: contain;
 }
 
 .course-stack {
@@ -1061,6 +1164,7 @@ select {
 @media (max-width: 1180px) {
   .hero-section,
   .page-intro-grid,
+  .course-partner-card,
   .course-layout,
   .booking-card {
     grid-template-columns: 1fr;

@@ -6,6 +6,7 @@ import {
   archiveItems,
   bookingSteps,
   contactDetails,
+  coursePartner,
   coursePillars,
   faqItems,
   galleryGroups,
@@ -83,6 +84,55 @@ function StoryCard({ card }) {
   );
 }
 
+function TimelineVisual({ item }) {
+  const slides = item.mediaGallery?.length ? item.mediaGallery : [item.media];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const isSlideshow = slides.length > 1;
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [item.day]);
+
+  useEffect(() => {
+    if (!isSlideshow) {
+      return undefined;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
+    }, 2800);
+
+    return () => window.clearInterval(timer);
+  }, [isSlideshow, slides.length]);
+
+  if (!isSlideshow) {
+    return <img src={item.media.src} alt={item.media.title} />;
+  }
+
+  return (
+    <div className="timeline-visual">
+      <div className="timeline-slideshow" aria-label={`${item.title} slideshow`}>
+        {slides.map((slide, index) => (
+          <img
+            key={slide.file}
+            className={index === activeIndex ? "is-active" : ""}
+            src={slide.src}
+            alt={slide.title}
+          />
+        ))}
+      </div>
+      <div className="timeline-dots" aria-hidden="true">
+        {slides.map((slide, index) => (
+          <span
+            key={slide.file}
+            className={index === activeIndex ? "is-active" : ""}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function TimelineItem({ item }) {
   return (
     <article className="timeline-card">
@@ -91,7 +141,7 @@ function TimelineItem({ item }) {
         <h3>{item.title}</h3>
         <span>{item.description}</span>
       </div>
-      <img src={item.media.src} alt={item.media.title} />
+      <TimelineVisual item={item} />
     </article>
   );
 }
@@ -452,6 +502,21 @@ function AboutPage({ onSelect }) {
           title="What happens inside the Trichology portion"
           description="The course option is for guests who want professional learning layered into the South Korea trip rather than treated as a separate classroom event."
         />
+        <article className="course-partner-card">
+          <div className="course-partner-copy">
+            <p>{coursePartner.eyebrow}</p>
+            <h3>{coursePartner.title}</h3>
+            <span>{coursePartner.description}</span>
+            <ul>
+              {coursePartner.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="course-partner-logo-shell">
+            <img src={coursePartner.logo.src} alt={coursePartner.logo.alt} />
+          </div>
+        </article>
         <div className="course-layout">
           <div className="course-stack">
             {coursePillars.map((pillar) => (
@@ -571,8 +636,8 @@ function ContactPage() {
               below to secure your package and receive the next travel details.
             </p>
             <p className="payment-plan-note">
-              Partial payments and payment plans are possible, but every
-              balance must be fully paid by September 30, 2026.
+              Partial payments and payment plans are possible, but the balance
+              must be fully paid by September 30, 2026.
             </p>
           </div>
           <ol>
