@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import ritaLogo from "./assets/rita-logo-header.png";
 import {
   aboutOverview,
   archiveItems,
@@ -211,8 +212,13 @@ function SiteHeader() {
   return (
     <header className="topbar">
       <Link className="brand-lockup" to="/">
-        <span>RITA</span>
-        <small>Restoration Institute of Trichology Advancements</small>
+        <span className="brand-mark" aria-hidden="true">
+          <img src={ritaLogo} alt="" />
+        </span>
+        <span className="brand-copy">
+          <span>RITA</span>
+          <small>Restoration Institute of Trichology Advancements</small>
+        </span>
       </Link>
       <nav className="site-nav" aria-label="Primary navigation">
         {navItems.map((item) => (

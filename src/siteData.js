@@ -2,6 +2,7 @@ const rawAssets = import.meta.glob(
   [
     "../*.{jpg,jpeg,png,webp,mp4,mov,webm,m4v}",
     "!../278653.jpg",
+    "!../Logo-01.png",
     "!../Cashapp QR code.png",
     "!../Paypal QR code.png",
     "!../Zelle QR Code.png",
