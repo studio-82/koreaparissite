@@ -271,9 +271,10 @@ function HomePage({ countdown }) {
           <p className="hero-kicker">November 30 - December 7, 2026 departure</p>
           <h1>Visit South Korea with RITA</h1>
           <p className="hero-summary">
-            Join a hosted South Korea trip that blends guided sightseeing,
-            premium head-spa access, and an optional Trichology course for
-            guests who want more than a standard tour.
+            Hosted by New York-based Restoration Institute of Trichology
+            Advancements (RITA), this South Korea trip blends guided
+            sightseeing, premium head-spa access, and an optional Trichology
+            course for guests who want more than a standard tour.
           </p>
           <div className="hero-cta-row">
             <Link to="/contact">Reserve Your Spot</Link>
