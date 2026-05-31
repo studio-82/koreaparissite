@@ -1,5 +1,11 @@
 const rawAssets = import.meta.glob(
-  ["../*.{jpg,jpeg,png,webp,mp4,mov,webm,m4v}", "!../278653.jpg"],
+  [
+    "../*.{jpg,jpeg,png,webp,mp4,mov,webm,m4v}",
+    "!../278653.jpg",
+    "!../Cashapp QR code.png",
+    "!../Paypal QR code.png",
+    "!../Zelle QR Code.png",
+  ],
   {
     eager: true,
   },
@@ -92,7 +98,7 @@ export const storyCards = [
     eyebrow: "Head spa immersion",
     title: "Step into treatment rooms, not just classrooms",
     description:
-      "Guests see how premium Korean scalp-care spaces are set up, how services flow from consultation to treatment, and why the head spa experience feels so elevated in person.",
+      "Guests see how premium Korean scalp-care and trichology spaces are set up, how services flow from consultation to treatment, and why the head spa experience feels so elevated in person.",
     media: mediaItem(
       "278637.jpg",
       "Head spa room",
@@ -385,7 +391,12 @@ export const faqItems = [
   {
     question: "How do travelers pay?",
     answer:
-      "Guests should confirm availability first and then pay Dave Ray through PayPal, Cash App, or Zelle before emailing proof of payment.",
+      "Guests should confirm availability first and then pay Dave Ray through PayPal, Cash App, or Zelle before emailing proof of payment. Partial payments and payment plans are possible, but all balances must be fully paid by September 30, 2026.",
+  },
+  {
+    question: "Are partial payments or payment plans allowed?",
+    answer:
+      "Yes. Partial payments and payment plans are possible, but the full balance for your package must be completed by September 30, 2026.",
   },
   {
     question: "Who is this experience for?",
@@ -421,7 +432,7 @@ export const paymentOptions = [
     note: "Tap the code to open Cash App, then enter your amount and include your full name and package in the note.",
     url: "https://cash.app/$DaveRay?qr=1",
     qr: mediaItem(
-      "Cashapp QR code.png",
+      "Cashapp QR code cropped.png",
       "Cash App QR code",
       "Cash App QR code for Dave Ray.",
     ),
@@ -433,7 +444,7 @@ export const paymentOptions = [
     note: "Tap the code to open PayPal, then enter your amount and include your full name and package in the message.",
     url: "https://www.paypal.com/qrcodes/managed/8e1b12a6-e126-489c-b92e-0ceff2183f08?utm_source=hawk_quick_link",
     qr: mediaItem(
-      "Paypal QR code.png",
+      "Paypal QR code cropped.png",
       "PayPal QR code",
       "PayPal QR code for Dave Ray.",
     ),
@@ -445,7 +456,7 @@ export const paymentOptions = [
     note: "Tap the code to open Zelle, then enter your amount and include your full name and package details with the payment.",
     url: "https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiRGF2ZSIsInRva2VuIjoiMTM0NzkzNDg0OTQifQ==",
     qr: mediaItem(
-      "Zelle QR Code.png",
+      "Zelle QR Code cropped.png",
       "Zelle QR code",
       "Zelle QR code for Dave Ray.",
     ),

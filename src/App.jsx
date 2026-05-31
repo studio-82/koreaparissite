@@ -18,15 +18,16 @@ import {
   storyCards,
 } from "./siteData";
 
-const COUNTDOWN_TARGET = "2026-11-30T00:00:00";
+const REGISTRATION_DEADLINE = "2026-10-01T00:00:00-04:00";
 
 function getCountdownParts() {
-  const difference = new Date(COUNTDOWN_TARGET).getTime() - Date.now();
+  const difference = new Date(REGISTRATION_DEADLINE).getTime() - Date.now();
+  const isClosed = difference <= 0;
   const totalHours = Math.max(0, Math.floor(difference / (1000 * 60 * 60)));
   const days = Math.floor(totalHours / 24);
   const hours = totalHours % 24;
   const weeks = Math.floor(days / 7);
-  return { days, hours, weeks };
+  return { days, hours, isClosed, weeks };
 }
 
 function ScrollToTop() {
@@ -63,11 +64,6 @@ function HeroCollage({ images }) {
       </div>
       <div className="hero-orb hero-orb-edge">
         <img src={images[2].src} alt="" />
-      </div>
-      <div className="hero-note-card">
-        <p>Hosted departure</p>
-        <strong>Nov 30 - Dec 7, 2026</strong>
-        <span>Seoul, Incheon, and Daejeon</span>
       </div>
     </div>
   );
@@ -286,13 +282,32 @@ function HomePage({ countdown }) {
               Ask About the Course
             </a>
           </div>
-          <div className="hero-countdown-card">
-            <span>Registration countdown</span>
-            <strong>{countdown.days} days left</strong>
-            <p>
-              {countdown.weeks} weeks and {countdown.hours} hours until
-              departure week begins.
-            </p>
+          <div className="hero-meta-row">
+            <div className="hero-countdown-card">
+              <span>Registration countdown</span>
+              {countdown.isClosed ? (
+                <>
+                  <strong>Registration deadline has passed</strong>
+                  <p>
+                    Registration closed on September 30, 2026. Contact Dave
+                    Ray directly to see what can still be arranged.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <strong>{countdown.days} days left</strong>
+                  <p>
+                    {countdown.weeks} weeks and {countdown.hours} hours until
+                    registration closes on September 30, 2026.
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="hero-note-card">
+              <p>Hosted departure</p>
+              <strong>Nov 30 - Dec 7, 2026</strong>
+              <span>Seoul, Incheon, and Daejeon</span>
+            </div>
           </div>
         </div>
 
@@ -515,7 +530,7 @@ function ContactPage() {
         <SectionHeading
           eyebrow="Pricing"
           title="Choose the experience that fits you"
-          description="Confirm whether you want the hosted travel package, the course option, or both before sending payment."
+          description="Confirm whether you want the hosted travel package, the course option, or both before sending payment. Partial payments and payment plans are possible, but all balances must be completed by September 30, 2026."
         />
         <div className="pricing-grid">
           {pricing.map((item) => (
@@ -539,6 +554,10 @@ function ContactPage() {
             <p>
               After your seat is confirmed, use one of the payment options
               below to secure your package and receive the next travel details.
+            </p>
+            <p className="payment-plan-note">
+              Partial payments and payment plans are possible, but every
+              balance must be fully paid by September 30, 2026.
             </p>
           </div>
           <ol>
