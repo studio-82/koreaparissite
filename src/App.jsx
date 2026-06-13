@@ -473,8 +473,8 @@ function HomePage({ countdown }) {
       <section className="pricing-section">
         <SectionHeading
           eyebrow="Packages"
-          title="Choose the travel package, the course, or both"
-          description="You can join for the hosted travel experience, add the separate Trichology course, or confirm both together."
+          title="Choose the travel package or the full Travel + Trichology package"
+          description="You can join for the hosted travel experience at $950, or choose the $2,500 Travel + Trichology package, which already includes the full travel package plus the course."
         />
         <div className="pricing-grid">
           {pricing.map((item) => (
@@ -544,7 +544,7 @@ function AboutPage({ onSelect }) {
         <SectionHeading
           eyebrow="Training option"
           title="What happens inside the Trichology portion"
-          description="The course option is for guests who want professional learning layered into the South Korea trip rather than treated as a separate classroom event."
+          description="The Travel + Trichology package is for guests who want professional learning layered into the South Korea trip rather than treated as a separate classroom event."
         />
         <article className="course-partner-card">
           <div className="course-partner-copy">
@@ -654,7 +654,7 @@ function ContactPage() {
         <SectionHeading
           eyebrow="Pricing"
           title="Choose the experience that fits you"
-          description="Confirm whether you want the hosted travel package, the course option, or both before sending payment. Partial payments and payment plans are possible, but all balances must be completed by September 30, 2026."
+          description="Confirm whether you want the $950 hosted travel package or the $2,500 Travel + Trichology package, which already includes the travel package plus the course. Partial payments and payment plans are possible, but all balances must be completed by September 30, 2026."
         />
         <div className="pricing-grid">
           {pricing.map((item) => (

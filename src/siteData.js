@@ -76,7 +76,7 @@ export const aboutOverview = {
     "RITA combines the excitement of traveling through South Korea with an optional Trichology training experience. Guests spend the week moving between sightseeing, wellness spaces, product environments, and guided group moments designed to feel both inspiring and professionally useful.",
   points: [
     "Guided travel through Seoul, Incheon, and Daejeon",
-    "A separate course option for guests who want Trichology exposure",
+    "An upgraded Travel + Trichology package for guests who want course access",
     "Visits that connect head spa culture, scalp care, and product operations",
   ],
   image: mediaItem(
@@ -186,7 +186,7 @@ export const itinerary = [
     media: mediaItem(
       "278616.jpg",
       "Hands-on scalp care",
-      "A hands-on moment that reflects the practical side of the course option.",
+      "A hands-on moment that reflects the practical side of the Travel + Trichology package.",
     ),
   },
   {
@@ -298,11 +298,12 @@ export const pricing = [
     ],
   },
   {
-    title: "Trichology course",
+    title: "Travel + Trichology package",
     price: "$2,500",
     note: "per person",
     features: [
-      "Separate course option connected to the South Korea trip",
+      "Includes the full 7 days / 6 nights travel package",
+      "Includes hotel accommodation, hotel meals, transportation, guide, and photographer",
       "Scalp-care, head spa, and product-category learning",
       "Campus and facility access tied to the educational experience",
       "Best for beauty professionals and scalp-care learners",
@@ -427,9 +428,9 @@ export const faqItems = [
       "Your travel package includes hotel accommodation, meals at the hotel, transportation, a tour guide, and a photographer. Airfare is specifically excluded.",
   },
   {
-    question: "Is the Trichology course separate from the trip cost?",
+    question: "Is the $2,500 Trichology package separate from the trip cost?",
     answer:
-      "Yes. The travel package is listed at $950 per person, while the Trichology course is listed separately at $2,500 per person.",
+      "No. The $2,500 Travel + Trichology package already includes the full $950 travel package, then adds the course, campus access, and educational portions on top of that.",
   },
   {
     question: "How do travelers pay?",
