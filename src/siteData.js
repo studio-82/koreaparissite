@@ -509,9 +509,9 @@ export const paymentOptions = [
     platform: "PayPal",
     title: "Pay Dave Ray on PayPal",
     subtitle: "Friends & Family payment",
-    note: "Send your payment as Friends & Family, and include your full name and package in the message.",
-    url: "https://paypal.me/daveabray910@gmail.com",
-    paymentAddress: "PayPal.me/daveabray910@gmail.com",
+    note: "Open PayPal, enter this email, then send your payment as Friends & Family. Include your full name and package in the message.",
+    url: "https://www.paypal.com/myaccount/transfer/homepage",
+    paymentAddress: "daveabray910@gmail.com",
     paymentType: "Friends & Family",
   },
   {
