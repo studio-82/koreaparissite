@@ -205,15 +205,29 @@ function PaymentCard({ option }) {
       <p>{option.platform}</p>
       <h3>{option.title}</h3>
       <span>{option.subtitle}</span>
-      <a
-        className="payment-qr-link"
-        href={option.url}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`Open ${option.platform} payment page`}
-      >
-        <img src={option.qr.src} alt={option.qr.title} />
-      </a>
+      {option.qr ? (
+        <a
+          className="payment-qr-link"
+          href={option.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open ${option.platform} payment page`}
+        >
+          <img src={option.qr.src} alt={option.qr.title} />
+        </a>
+      ) : (
+        <a
+          className="payment-details-link"
+          href={option.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open ${option.platform} payment page`}
+        >
+          <span>Send payment to</span>
+          <strong>{option.paymentAddress}</strong>
+          <em>{option.paymentType}</em>
+        </a>
+      )}
       <p className="payment-note">{option.note}</p>
       <a
         className="payment-link-button"

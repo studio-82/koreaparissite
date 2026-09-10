@@ -8,6 +8,7 @@ const rawAssets = import.meta.glob(
     "!../ecobioMedicalInstitute.png",
     "!../Cashapp QR code.png",
     "!../Paypal QR code.png",
+    "!../Paypal QR code cropped.png",
     "!../Zelle QR Code.png",
   ],
   {
@@ -507,14 +508,11 @@ export const paymentOptions = [
   {
     platform: "PayPal",
     title: "Pay Dave Ray on PayPal",
-    subtitle: "PayPal QR checkout",
-    note: "Tap the code to open PayPal, then enter your amount and include your full name and package in the message.",
-    url: "https://www.paypal.com/qrcodes/managed/8e1b12a6-e126-489c-b92e-0ceff2183f08?utm_source=hawk_quick_link",
-    qr: mediaItem(
-      "Paypal QR code cropped.png",
-      "PayPal QR code",
-      "PayPal QR code for Dave Ray.",
-    ),
+    subtitle: "Friends & Family payment",
+    note: "Send your payment as Friends & Family, and include your full name and package in the message.",
+    url: "https://paypal.me/daveabray910@gmail.com",
+    paymentAddress: "PayPal.me/daveabray910@gmail.com",
+    paymentType: "Friends & Family",
   },
   {
     platform: "Zelle",
