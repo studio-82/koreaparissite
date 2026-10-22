@@ -436,12 +436,12 @@ export const faqItems = [
   {
     question: "How do travelers pay?",
     answer:
-      "Guests should confirm availability first and then pay Dave Ray through PayPal, Cash App, or Zelle before emailing proof of payment. Partial payments and payment plans are possible, but all balances must be fully paid by September 30, 2026.",
+      "Guests should confirm availability first and then pay Dave Ray through PayPal, Cash App, or Zelle before emailing proof of payment. Partial payments and payment plans are possible, but all balances must be fully paid by November 14, 2026.",
   },
   {
     question: "Are partial payments or payment plans allowed?",
     answer:
-      "Yes. Partial payments and payment plans are possible, but the full balance for your package must be completed by September 30, 2026.",
+      "Yes. Partial payments and payment plans are possible, but the full balance for your package must be completed by November 14, 2026.",
   },
   {
     question: "Who is this experience for?",

@@ -21,7 +21,7 @@ import {
   storyCards,
 } from "./siteData";
 
-const REGISTRATION_DEADLINE = "2026-10-01T00:00:00-04:00";
+const REGISTRATION_DEADLINE = "2026-11-15T00:00:00-05:00";
 
 function getCountdownParts() {
   const difference = new Date(REGISTRATION_DEADLINE).getTime() - Date.now();
@@ -412,7 +412,7 @@ function HomePage({ countdown }) {
                 <>
                   <strong>Registration deadline has passed</strong>
                   <p>
-                    Registration closed on September 30, 2026. Contact Dave
+                    Registration closed on November 14, 2026. Contact Dave
                     Ray directly to see what can still be arranged.
                   </p>
                 </>
@@ -421,7 +421,7 @@ function HomePage({ countdown }) {
                   <strong>{countdown.days} days left</strong>
                   <p>
                     {countdown.weeks} weeks and {countdown.hours} hours until
-                    registration closes on September 30, 2026.
+                    registration closes on November 14, 2026.
                   </p>
                 </>
               )}
@@ -668,7 +668,7 @@ function ContactPage() {
         <SectionHeading
           eyebrow="Pricing"
           title="Choose the experience that fits you"
-          description="Confirm whether you want the $950 hosted travel package or the $2,500 Travel + Trichology package, which already includes the travel package plus the course. Partial payments and payment plans are possible, but all balances must be completed by September 30, 2026."
+          description="Confirm whether you want the $950 hosted travel package or the $2,500 Travel + Trichology package, which already includes the travel package plus the course. Partial payments and payment plans are possible, but all balances must be completed by November 14, 2026."
         />
         <div className="pricing-grid">
           {pricing.map((item) => (
@@ -695,7 +695,7 @@ function ContactPage() {
             </p>
             <p className="payment-plan-note">
               Partial payments and payment plans are possible, but the balance
-              must be fully paid by September 30, 2026.
+              must be fully paid by November 14, 2026.
             </p>
           </div>
           <ol>
